@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+          
+            <%- include('./partials/navbar-expanded') -%>
+
+            <!------------- others main dashboard body content ------------>
+            
+    <!-- main -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="header-text-full">
+                    <h3 class="ms-2 mb-0 mt-2">Add Fund</h3>
+                </div>
+            </div>
+        </div>
+
+        <section class="payment-gateway mt-4">
+            <div class="container-fluid">
+                <div class="row">
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5fe439f477bb7.jpg"
+                                         alt="Blockchain">
+                                    <button type="button"
+                                            data-id="23"
+                                            data-name="Blockchain"
+                                            data-currency="BTC"
+                                            data-gateway="blockchain"
+                                            data-min_amount="100"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/61d16f5313ee41641115475.jpg"
+                                         alt="Bank Transfer">
+                                    <button type="button"
+                                            data-id="1000"
+                                            data-name="Bank Transfer"
+                                            data-currency="BDT"
+                                            data-gateway="bank-transfer"
+                                            data-min_amount="10"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5fe038332ad52.jpg"
+                                         alt="Block.io">
+                                    <button type="button"
+                                            data-id="21"
+                                            data-name="Block.io"
+                                            data-currency="BTC"
+                                            data-gateway="blockio"
+                                            data-min_amount="10.100042"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/cashmaal.jpg"
+                                         alt="cashmaal">
+                                    <button type="button"
+                                            data-id="25"
+                                            data-name="cashmaal"
+                                            data-currency="PKR"
+                                            data-gateway="cashmaal"
+                                            data-min_amount="100"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b6c79b0e05a1672923035.jpg"
+                                         alt="Konnect">
+                                    <button type="button"
+                                            data-id="31"
+                                            data-name="Konnect"
+                                            data-currency="USD"
+                                            data-gateway="konnect"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b6c5f19bbd21672922609.jpg"
+                                         alt="Free kassa">
+                                    <button type="button"
+                                            data-id="30"
+                                            data-name="Free kassa"
+                                            data-currency="RUB"
+                                            data-gateway="freekassa"
+                                            data-min_amount="10"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0.1"
+                                            data-fix_charge="0"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/64a9057f0bec51688798591.png"
+                                         alt="Binance">
+                                    <button type="button"
+                                            data-id="33"
+                                            data-name="Binance"
+                                            data-currency="USDT"
+                                            data-gateway="binance"
+                                            data-min_amount="1"
+                                            data-max_amount="1000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637de6d9fef.jpg"
+                                         alt="Authorize.Net">
+                                    <button type="button"
+                                            data-id="14"
+                                            data-name="Authorize.Net"
+                                            data-currency="USD"
+                                            data-gateway="authorizenet"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b6a0f262c9f1672913138.jpg"
+                                         alt="Nowpayments">
+                                    <button type="button"
+                                            data-id="27"
+                                            data-name="Nowpayments"
+                                            data-currency="BTC"
+                                            data-gateway="nowpayments"
+                                            data-min_amount="10.1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b6c23aac9181672921658.png"
+                                         alt="MAGUA PAY">
+                                    <button type="button"
+                                            data-id="29"
+                                            data-name="MAGUA PAY"
+                                            data-currency="EUR"
+                                            data-gateway="swagger"
+                                            data-min_amount="100"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b6ab4d45abb1672915789.webp"
+                                         alt="Khalti Payment">
+                                    <button type="button"
+                                            data-id="28"
+                                            data-name="Khalti Payment"
+                                            data-currency="NPR"
+                                            data-gateway="khalti"
+                                            data-min_amount="100"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b6c9e2b69431672923618.png"
+                                         alt="Mypay Np">
+                                    <button type="button"
+                                            data-id="32"
+                                            data-name="Mypay Np"
+                                            data-currency="NPR"
+                                            data-gateway="mypay"
+                                            data-min_amount="1"
+                                            data-max_amount="100000"
+                                            data-percent_charge="1.5"
+                                            data-fix_charge="0"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b69d81f06f21672912257.png"
+                                         alt="peachpayments">
+                                    <button type="button"
+                                            data-id="26"
+                                            data-name="peachpayments"
+                                            data-currency="USD"
+                                            data-gateway="peachpayments"
+                                            data-min_amount="100"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/63b6b02748f191672917031.png"
+                                         alt="Midtrans">
+                                    <button type="button"
+                                            data-id="24"
+                                            data-name="Midtrans"
+                                            data-currency="IDR"
+                                            data-gateway="midtrans"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.05"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637d6a0b22d.jpg"
+                                         alt="Flutterwave">
+                                    <button type="button"
+                                            data-id="9"
+                                            data-name="Flutterwave"
+                                            data-currency="USD"
+                                            data-gateway="flutterwave"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637da3c44d2.jpg"
+                                         alt="instamojo">
+                                    <button type="button"
+                                            data-id="11"
+                                            data-name="instamojo"
+                                            data-currency="INR"
+                                            data-gateway="instamojo"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637b5622d23.jpg"
+                                         alt="Paypal">
+                                    <button type="button"
+                                            data-id="1"
+                                            data-name="Paypal"
+                                            data-currency="USD"
+                                            data-gateway="paypal"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="1"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f659e5355859.jpg"
+                                         alt="Coingate">
+                                    <button type="button"
+                                            data-id="18"
+                                            data-name="Coingate"
+                                            data-currency="USD"
+                                            data-gateway="coingate"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5ffd7d962985e1610448278.jpg"
+                                         alt="CoinPayments">
+                                    <button type="button"
+                                            data-id="22"
+                                            data-name="CoinPayments"
+                                            data-currency="BTC"
+                                            data-gateway="coinpayments"
+                                            data-min_amount="10"
+                                            data-max_amount="99999"
+                                            data-percent_charge="1"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f6703145a5ca.jpg"
+                                         alt="Coinbase Commerce">
+                                    <button type="button"
+                                            data-id="19"
+                                            data-name="Coinbase Commerce"
+                                            data-currency="USD"
+                                            data-gateway="coinbasecommerce"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f645d1bc1f24.jpg"
+                                         alt="Mercado Pago">
+                                    <button type="button"
+                                            data-id="17"
+                                            data-name="Mercado Pago"
+                                            data-currency="BRL"
+                                            data-gateway="mercadopago"
+                                            data-min_amount="3715.12"
+                                            data-max_amount="371500000.12"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637db537958.jpg"
+                                         alt="Mollie">
+                                    <button type="button"
+                                            data-id="12"
+                                            data-name="Mollie"
+                                            data-currency="USD"
+                                            data-gateway="mollie"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5fbca5d05057f.jpg"
+                                         alt="Monnify">
+                                    <button type="button"
+                                            data-id="20"
+                                            data-name="Monnify"
+                                            data-currency="NGN"
+                                            data-gateway="monnify"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f64d52d09e13.jpg"
+                                         alt="Payeer">
+                                    <button type="button"
+                                            data-id="6"
+                                            data-name="Payeer"
+                                            data-currency="RUB"
+                                            data-gateway="payeer"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637d069177e.jpg"
+                                         alt="PayStack">
+                                    <button type="button"
+                                            data-id="7"
+                                            data-name="PayStack"
+                                            data-currency="NGN"
+                                            data-gateway="paystack"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637cbfb4d4c.jpg"
+                                         alt="PayTM">
+                                    <button type="button"
+                                            data-id="5"
+                                            data-name="PayTM"
+                                            data-currency="INR"
+                                            data-gateway="paytm"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f6390dbaa6ff.jpg"
+                                         alt="PayUmoney">
+                                    <button type="button"
+                                            data-id="16"
+                                            data-name="PayUmoney"
+                                            data-currency="INR"
+                                            data-gateway="payumoney"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f64d522d8bea.jpg"
+                                         alt="Perfect Money">
+                                    <button type="button"
+                                            data-id="4"
+                                            data-name="Perfect Money"
+                                            data-currency="USD"
+                                            data-gateway="perfectmoney"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637d80b68e0.jpg"
+                                         alt="RazorPay">
+                                    <button type="button"
+                                            data-id="10"
+                                            data-name="RazorPay"
+                                            data-currency="INR"
+                                            data-gateway="razorpay"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637e002d11b.jpg"
+                                         alt="SecurionPay">
+                                    <button type="button"
+                                            data-id="15"
+                                            data-name="SecurionPay"
+                                            data-currency="USD"
+                                            data-gateway="securionpay"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637d53da3e7.jpg"
+                                         alt="VoguePay">
+                                    <button type="button"
+                                            data-id="8"
+                                            data-name="VoguePay"
+                                            data-currency="USD"
+                                            data-gateway="voguepay"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f645d432b9c0.jpg"
+                                         alt="Stripe ">
+                                    <button type="button"
+                                            data-id="2"
+                                            data-name="Stripe "
+                                            data-currency="USD"
+                                            data-gateway="stripe"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637c7fcb9ef.jpg"
+                                         alt="Skrill">
+                                    <button type="button"
+                                            data-id="3"
+                                            data-name="Skrill"
+                                            data-currency="USD"
+                                            data-gateway="skrill"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/gateway/5f637e7eae68b.jpg"
+                                         alt="2checkout">
+                                    <button type="button"
+                                            data-id="13"
+                                            data-name="2checkout"
+                                            data-currency="USD"
+                                            data-gateway="twocheckout"
+                                            data-min_amount="1"
+                                            data-max_amount="10000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="0.5"
+                                            class="gold-btn addFund"
+                                            data-bs-toggle="modal" data-bs-target="#addFundModal">Pay Now                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                                    </div>
+            </div>
+        </section>
+    </div>
+
+
+    
+
+        </div>
+    </div>
+</div>
+
+
+        <!-- Modal -->
+        <div class="modal fade addFundModal" id="addFundModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true" data-bs-backdrop="static" role="dialog">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content form-block">
+                    <div class="modal-header">
+                        <h4 class="modal-title method-name golden-text"></h4>
+                        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="payment-form">
+                                                            <p class="golden-text depositLimit lebelFont"></p>
+                                <p class="golden-text depositCharge lebelFont"></p>
+                                                        <input type="hidden" class="gateway" name="gateway" value="">
+
+                            <form action="">
+                                <div class="row g-3 align-items-end">
+                                    <div class="input-box col-12">
+                                        <h5 class="text-white">Amount</h5>
+                                        <div class="input-group">
+                                            <input type="text" class="amount form-control" name="amount"
+                                                   />
+                                            <button class="btn-custom show-currency"></button>
+                                        </div>
+                                        <pre class="text-danger errors"></pre>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="payment-info text-center">
+                            <img id="loading" src="https://script.bugfinder.net/hyippro/screaminlizard/assets/admin/images/loading.gif" alt="loader"
+                                 class="w-15"/>
+                        </div>
+
+                        <div class="input-box col-12 modal-footer">
+                            <button class="btn-custom w-100 checkCalc" type="button"><i class="fa fa-angle-right"></i>Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+    
+</body>
+</html>
+
+

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+   
+    <%- include('./partials/sideBar') -%>
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+           
+            <%- include('./partials/navbar-expanded') -%>
+            
+            <!------------- others main dashboard body content ------------>
+                <!-- main -->
+    <div class="container-fluid">
+        <div class="main row" id="firebase-app">
+            <div class="col-12">
+                <div class="bd-callout bd-callout-primary alert d-flex justify-content-between align-items-start" role="alert">
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-info-circle me-2"></i> Do not miss any single important notification! Allow your
+                        browser to get instant push notification.
+                        <button class="btn btn-sm btn-primary mx-3" id="allow-notification">Allow me</button>
+                    </div>
+                    <button class="close-btn pt-1" @click.prevent="skipNotification"><i class="fa fa-times text-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12" v-if="notificationPermission == 'denied' && !is_notification_skipped" v-cloak>
+                <div class="bd-callout bd-callout-warning alert d-flex justify-content-between align-items-start" role="alert">
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-info-circle me-2"></i> Please allow your browser to get instant push notification.
+                        Allow it from
+                        notification setting.                    </div>
+                    <button class="close-btn pt-1" @click.prevent="skipNotification"><i class="fa fa-times text-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row g-4">
+                    <!-- card boxes -->
+                    <div class="col-12 d-none d-lg-block">
+                        <div class="row g-4">
+                            <div class="col-xl-3 col-lg-3 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>$156.92</h4>
+                                        <i class="fa fa-dollar-sign"></i>
+                                    </div>
+                                    <p class="mb-0">Main Balance</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>$4.3</h4>
+                                        <i class="fa fa-hand-holding-usd"></i>
+                                    </div>
+                                    <p class="mb-0">Interest Balance</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>$190776</h4>
+                                        <i class="fa fa-box-usd"></i>
+                                    </div>
+                                    <p class="mb-0">Total Deposit</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>$31242.79</h4>
+                                        <i class="fa fa-envelope-open-dollar"></i>
+                                    </div>
+                                    <p class="mb-0">Total Earn</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>$299895.48</h4>
+                                        <i class="fa fa-funnel-dollar"></i>
+                                    </div>
+                                    <p class="mb-0">Total Invest</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>$0</h4>
+                                        <i class="fa fa-money-check-alt"></i>
+                                    </div>
+                                    <p class="mb-0">Total Payout</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>6</h4>
+                                        <i class="fa fa-ticket"></i>
+                                    </div>
+                                    <p class="mb-0">Total Ticket</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="card-box">
+                                    <div class="d-flex justify-content-between">
+                                        <h4>$0</h4>
+                                        <i class="fa fa-usd-circle"></i>
+                                    </div>
+                                    <p class="mb-0">Total Referral Bonus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- card boxes with slider -->
+                    <div class="col-12 d-lg-none">
+                        <div class="row g--4 g-0 card-box-wrapper owl-carousel card-boxes">
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>$156.92</h4>
+                                    <i class="fa fa-dollar-sign"></i>
+                                </div>
+                                <p class="mb-0">Main Balance</p>
+                            </div>
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>$4.3</h4>
+                                    <i class="fa fa-hand-holding-usd"></i>
+                                </div>
+                                <p class="mb-0">Interest Balance</p>
+                            </div>
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>$190776</h4>
+                                    <i class="fa fa-box-usd"></i>
+                                </div>
+                                <p class="mb-0">Total Deposit</p>
+                            </div>
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>$31242.79</h4>
+                                    <i class="fa fa-envelope-open-dollar"></i>
+                                </div>
+                                <p class="mb-0">Total Earn</p>
+                            </div>
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>$299895.48</h4>
+                                    <i class="fa fa-funnel-dollar"></i>
+                                </div>
+                                <p class="mb-0">Total Invest</p>
+                            </div>
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>$0</h4>
+                                    <i class="fa fa-money-check-alt"></i>
+                                </div>
+                                <p class="mb-0">Total Payout</p>
+                            </div>
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>6</h4>
+                                    <i class="fa fa-ticket"></i>
+                                </div>
+                                <p class="mb-0">Total Ticket</p>
+                            </div>
+                            <div class="card-box">
+                                <div class="d-flex justify-content-between">
+                                    <h4>$0</h4>
+                                    <i class="fa-light fa-file-chart-pie"></i>
+                                </div>
+                                <p class="mb-0">Total Referral Bonus</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-12">
+                        <div class="card-box refferal-box">
+                            <h5>Your refferal link</h5>
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    value="https://script.bugfinder.net/hyippro/screaminlizard/register/demouser"
+                                    id="sponsorURL"
+                                    disabled=""/>
+                                <button id="copyBtn" onclick="copyText('sponsorURL')" class="btn text-white">
+                                    Copy Link                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                        <div class="card-box refferal-box">
+                                <h5>Total Referral Bonus</h5>
+                            <div class="d-flex justify-content-between">
+                                <h4>$ 0</h4>
+                                <i class="fa fa-usd-circle"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="main row">
+            <div class="col-12">
+                <div class="row g-4">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                        <div class="card-box refferal-box">
+                            <h5>Transaction Analytics</h5>
+                            <div class="chart-information">
+                                <div class="progress-wrapper">
+                                    <div
+                                        id="container"
+                                        class="apexcharts-canvas"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                        <div class="card-box refferal-box">
+                            <div class="chart-information">
+                                <div class="progress-wrapper progress-wrapper-circle">
+                                    <div class="progress-container d-flex flex-column flex-sm-row justify-content-around">
+                                        <div class="circular-progress cp_1">
+                                            <svg
+                                                class="radial-progress"
+                                                data-percentage="15"
+                                                viewBox="0 0 80 80"
+                                            >
+                                                <circle
+                                                    class="incomplete"
+                                                    cx="40"
+                                                    cy="40"
+                                                    r="35"
+                                                ></circle>
+                                                <circle
+                                                    class="complete"
+                                                    cx="40"
+                                                    cy="40"
+                                                    r="35"
+                                                    style="
+                                    stroke-dashoffset: 39.58406743523136;
+                                    "
+                                                ></circle>
+                                                <text
+                                                    class="percentage"
+                                                    x="50%"
+                                                    y="53%"
+                                                    transform="matrix(0, 1, -1, 0, 80, 0)"
+                                                >
+                                                    15 %
+                                                </text>
+                                            </svg>
+                                            <h4 class="golden-text mt-4 text-center">
+                                                Invest Completed                                            </h4>
+                                        </div>
+
+                                        <div class="circular-progress cp_3">
+                                            <svg
+                                                class="radial-progress"
+                                                data-percentage="-38"
+                                                viewBox="0 0 80 80"
+                                            >
+                                                <circle
+                                                    class="incomplete"
+                                                    cx="40"
+                                                    cy="40"
+                                                    r="35"
+                                                ></circle>
+                                                <circle
+                                                    class="complete"
+                                                    cx="40"
+                                                    cy="40"
+                                                    r="35"
+                                                    style="
+                                    stroke-dashoffset: 39.58406743523136;
+                                    "
+                                                ></circle>
+                                                <text
+                                                    class="percentage"
+                                                    x="50%"
+                                                    y="53%"
+                                                    transform="matrix(0, 1, -1, 0, 80, 0)"
+                                                >
+                                                    -38 %
+                                                </text>
+                                            </svg>
+
+                                            <h4 class="golden-text mt-4 text-center">
+                                                ROI Speed                                            </h4>
+                                        </div>
+
+                                        <div class="circular-progress cp_2">
+                                            <svg
+                                                class="radial-progress"
+                                                data-percentage="138"
+                                                viewBox="0 0 80 80"
+                                            >
+                                                <circle
+                                                    class="incomplete"
+                                                    cx="40"
+                                                    cy="40"
+                                                    r="35"
+                                                ></circle>
+                                                <circle
+                                                    class="complete"
+                                                    cx="40"
+                                                    cy="40"
+                                                    r="35"
+                                                    style="
+                                    stroke-dashoffset: 147.3406954533613;
+                                    "
+                                                ></circle>
+                                                <text
+                                                    class="percentage"
+                                                    x="50%"
+                                                    y="53%"
+                                                    transform="matrix(0, 1, -1, 0, 80, 0)"
+                                                >
+                                                    138 %
+                                                </text>
+                                            </svg>
+
+                                            <h4 class="golden-text mt-4 text-center">
+                                                ROI Redeemed                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+
+    <script>
+        "use strict";
+
+        var options = {
+            theme: {
+                mode: 'dark',
+            },
+
+            series: [
+                {
+                    name: "Investment",
+                    color: 'rgba(247, 147, 26, 1)',
+                    data: [16182,11483,7837,14253,100,0,13369,23818,12044.55,0,0,0]
+                },
+                {
+                    name: "Payout",
+                    color: 'rgba(240, 16, 16, 1)',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+                {
+                    name: "Deposit",
+                    color: 'rgba(255, 72, 0, 1)',
+                    data: [0,0,0,10070,0,0,10701,17658,16370,0,0,0]
+                },
+                {
+                    name: "Deposit Bonus",
+                    color: 'rgba(39, 144, 195, 1)',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+                {
+                    name: "Investment Bonus",
+                    color: 'rgba(136, 203, 245, 1)',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0]
+                }
+            ],
+            chart: {
+                type: 'bar',
+                // height: ini,
+                background: '#000',
+                toolbar: {
+                    show: false
+                }
+
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: ["January","February","March","April","May","June","July","August","September","October","November","December"],
+
+            },
+            yaxis: {
+                title: {
+                    text: ""
+                }
+            },
+            fill: {
+                opacity: 1
+            },
+            tooltip: {
+                colors: ['#000'],
+                y: {
+                    formatter: function (val) {
+                        return "$" + val + ""
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#container"), options);
+        chart.render();
+
+        function copyFunction() {
+            var copyText = document.getElementById("sponsorURL");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            /*For mobile devices*/
+            document.execCommand("copy");
+            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
+        }
+    </script>
+     
+
+</body>
+</html>

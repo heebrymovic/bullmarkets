@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+            
+            <%- include('./partials/navbar-expanded') -%>
+
+            <!------------- others main dashboard body content ------------>
+                <!-- main -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="header-text-full">
+                    <h3 class="ms-2 mb-0 mt-2">Fund History</h3>
+                </div>
+            </div>
+        </div>
+        <div class="main row">
+            <div class="col-12">
+                <!-- table -->
+                <div class="table-parent table-responsive mt-4">
+                    <div class="table-search-bar">
+                        <div>
+                            <form action="https://script.bugfinder.net/hyippro/screaminlizard/user/fund-history-search" method="get">
+                                <div class="row g-3 align-items-end">
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <input type="text" name="name" value="" class="form-control" placeholder="Type Here" />
+                                    </div>
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <select class="js-example-basic-single form-control" name="status" id="salutation" aria-label="Default select example">
+                                            <option value="">All Payment</option>
+                                            <option value="1"
+                                                    >Complete Payment</option>
+                                            <option value="2"
+                                                    >Pending Payment</option>
+                                            <option value="3"
+                                                    >Cancel Payment</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <input type="text" class="form-control datepicker" name="date_time"
+                                               placeholder="Select a date" value="" autocomplete="off" readonly/>
+                                    </div>
+
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <button class="btn-custom w-100" type="submit"><i class="fa fa-search"></i> Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <table class="table table-striped mb-5">
+                        <thead>
+                        <tr>
+                            <th scope="col">Transaction ID</th>
+                            <th scope="col">Gateway</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Charge</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                                    <tr>
+                                <td data-label="Transaction ID">ZBEB2YP36U3Y</td>
+                                <td data-label="Gateway">Binance</td>
+                                <td data-label="Amount">100 USD</td>
+                                <td data-label="Charge"> 0 USD</td>
+                                <td data-label="Status">
+                                                                            <span class="badge bg-success">Complete</span>
+                                                                    </td>
+                                <td data-label="Time">21 Sep 2023 09:37 AM</td>
+                            </tr>
+
+                                                    <tr>
+                                <td data-label="Transaction ID">PMJXKXCWP6NN</td>
+                                <td data-label="Gateway">Binance</td>
+                                <td data-label="Amount">5 USD</td>
+                                <td data-label="Charge"> 0 USD</td>
+                                <td data-label="Status">
+                                                                            <span class="badge bg-success">Complete</span>
+                                                                    </td>
+                                <td data-label="Time">21 Sep 2023 09:04 AM</td>
+                            </tr>
+
+                                                    <tr>
+                                <td data-label="Transaction ID">XT1BXTCR7BXK</td>
+                                <td data-label="Gateway">Binance</td>
+                                <td data-label="Amount">10 USD</td>
+                                <td data-label="Charge"> 0 USD</td>
+                                <td data-label="Status">
+                                                                            <span class="badge bg-success">Complete</span>
+                                                                    </td>
+                                <td data-label="Time">21 Sep 2023 03:59 AM</td>
+                            </tr>
+
+                                                    <tr>
+                                <td data-label="Transaction ID">KVTYHSK1YTWS</td>
+                                <td data-label="Gateway">Bank Transfer</td>
+                                <td data-label="Amount">500 USD</td>
+                                <td data-label="Charge"> 5 USD</td>
+                                <td data-label="Status">
+                                                                            <span class="badge bg-warning">Pending</span>
+                                                                    </td>
+                                <td data-label="Time">19 Sep 2023 10:25 PM</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <nav id="pagination">
+            <ul class="pagination justify-content-center mb-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.35s">
+            
+                            <li class="disabled page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+            
+            
+                            
+                
+                
+                                                                                        <li class="page-item active">
+                                <a href="#" class="page-link">1<span class="sr-only">(current)</span></a>
+                            </li>
+                                                                                                <li class="page-item">
+                                <a href="fund-history.html?page=2" class="page-link">2</a>
+                            </li>                                                               <li class="page-item">
+                                
+                                                                                        
+                                    <li class=" page-item">
+                        <a href="#" class="page-link">...</a>
+                    </li>
+                
+                
+                                            
+                
+                
+                                                                                        <li class="page-item">
+                                <a href="fund-history.html?page=19" class="page-link">19</a>
+                            </li>
+                                                                                                <li class="page-item">
+                                <a href="fund-history.html?page=20" class="page-link">20</a>
+                            </li>
+                                                                        
+            
+                            <li class="page-item">
+                    <a href="fund-history.html?page=2" class="page-link" rel="next">&raquo;</a>
+                </li>
+                    </ul>
+    </nav>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+    
+</body>
+</html>

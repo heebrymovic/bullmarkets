@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+           
+            <%- include('./partials/navbar-expanded') -%>
+            
+            <!------------- others main dashboard body content ------------>
+                <script>
+        "use strict"
+
+        function getCountDown(elementId, seconds) {
+            var times = seconds;
+            var x = setInterval(function () {
+                var distance = times * 1000;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById(elementId).innerHTML = days + "d: " + hours + "h " + minutes + "m " + seconds + "s ";
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById(elementId).innerHTML = "COMPLETE";
+                }
+                times--;
+            }, 1000);
+        }
+    </script>
+
+
+    <!-- main -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="header-text-full">
+                    <h3 class="ms-2 mb-0 mt-2">Invest History</h3>
+                </div>
+            </div>
+        </div>
+        <div class="main row">
+            <div class="col-12">
+                <!-- table -->
+                <div class="table-parent table-responsive mt-4">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">SL</th>
+                            <th scope="col">Plan</th>
+                            <th scope="col">Return Interest</th>
+                            <th scope="col">Received Amount</th>
+                            <th scope="col">Upcoming Payment</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                                    <tr>
+                                <td data-label="SL No.">1</td>
+                                <td data-label="Plan">
+                                    Business Plan
+                                    <br> 100 USD
+                                </td>
+                                <td data-label="Return Interest">
+                                    6 USD
+                                    per Day
+                                    <br>
+                                    
+                                </td>
+                                <td data-label="Received Amount">
+                                    0 x 6.00 =  0 USD
+                                </td>
+
+                                <td data-label="Upcoming Payment">
+                                                                            <p id="counter1308" class="mb-2"></p>
+                                        <script>getCountDown("counter1308", 85361);</script>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"  style="width: 1.20%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1.20%</div>
+                                        </div>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td data-label="SL No.">2</td>
+                                <td data-label="Plan">
+                                    Baby Plan
+                                    <br> 99 USD
+                                </td>
+                                <td data-label="Return Interest">
+                                    6 USD
+                                    per Day
+                                    <br>
+                                    
+                                </td>
+                                <td data-label="Received Amount">
+                                    0 x 6.00 =  0 USD
+                                </td>
+
+                                <td data-label="Upcoming Payment">
+                                                                            <p id="counter1307" class="mb-2"></p>
+                                        <script>getCountDown("counter1307", 188505);</script>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"  style="width: 100.00%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100.00%</div>
+                                        </div>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td data-label="SL No.">3</td>
+                                <td data-label="Plan">
+                                    Baby Plan
+                                    <br> 100 USD
+                                </td>
+                                <td data-label="Return Interest">
+                                    6 USD
+                                    per Day
+                                    <br>
+                                    
+                                </td>
+                                <td data-label="Received Amount">
+                                    0 x 6.00 =  0 USD
+                                </td>
+
+                                <td data-label="Upcoming Payment">
+                                                                            <p id="counter1306" class="mb-2"></p>
+                                        <script>getCountDown("counter1306", 196660);</script>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"  style="width: 100.00%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100.00%</div>
+                                        </div>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td data-label="SL No.">4</td>
+                                <td data-label="Plan">
+                                    Hatchling Plan
+                                    <br> 120 USD
+                                </td>
+                                <td data-label="Return Interest">
+                                    7.2 USD
+                                    per Day
+                                    <br>
+                                    
+                                </td>
+                                <td data-label="Received Amount">
+                                    0 x 7.20 =  0 USD
+                                </td>
+
+                                <td data-label="Upcoming Payment">
+                                                                            <p id="counter1305" class="mb-2"></p>
+                                        <script>getCountDown("counter1305", 248265);</script>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"  style="width: 100.00%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100.00%</div>
+                                        </div>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td data-label="SL No.">5</td>
+                                <td data-label="Plan">
+                                    Baby Plan
+                                    <br> 400 USD
+                                </td>
+                                <td data-label="Return Interest">
+                                    6 USD
+                                    per Day
+                                    <br>
+                                    
+                                </td>
+                                <td data-label="Received Amount">
+                                    0 x 6.00 =  0 USD
+                                </td>
+
+                                <td data-label="Upcoming Payment">
+                                    <p id="counter1304" class="mb-2"></p>
+                                        <script>getCountDown("counter1304", 264454);</script>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar"  style="width: 100.00%"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100.00%</div>
+                                        </div>
+                                </td>
+                            </tr>
+                                         
+                           
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+
+
+    <script>
+        "use strict";
+
+
+        function copyFunction() {
+            var copyText = document.getElementById("sponsorURL");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            /*For mobile devices*/
+            document.execCommand("copy");
+            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
+        }
+    </script>
+      
+   
+    
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+            
+            <%- include('./partials/navbar-expanded') -%>
+
+            <!------------- others main dashboard body content ------------>
+            
+    <!-- main -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="header-text-full">
+                    <h3 class="ms-2 mb-0 mt-2">Transaction</h3>
+                </div>
+            </div>
+        </div>
+        <div class="main row">
+            <div class="col-12">
+                <!-- table -->
+                <div class="table-parent table-responsive mt-4">
+                    <div class="table-search-bar">
+                        <div>
+                            <form action="https://script.bugfinder.net/hyippro/screaminlizard/user/transaction-search" method="get">
+                                <div class="row g-3 align-items-end">
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <input type="text" name="transaction_id" value="" class="form-control" placeholder="Search for Transaction ID" />
+                                    </div>
+
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <input type="text" name="remark" value="" class="form-control" placeholder="Remark" />
+                                    </div>
+
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <input type="text" class="form-control datepicker" name="datetrx"
+                                               placeholder="Select a date"  autocomplete="off" readonly/>
+                                    </div>
+
+                                    <div class="input-box col-lg-3 col-md-3 col-xl-3 col-12">
+                                        <button class="btn-custom w-100" type="submit"><i class="fa fa-search"></i> Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <table class="table table-striped mb-5">
+                        <thead>
+                            <tr>
+                                <th scope="col">SL No.</th>
+                                <th scope="col">Transaction ID</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Remarks</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                    <tr>
+                                <td data-label="SL No.">1</td>
+                                <td data-label="Transaction ID">WE1PTTTAOQF1</td>
+                                <td data-label="Amount">
+                                    <span class="fontBold text-danger">-100 USD</span>
+                                </td>
+                                <td data-label="Remarks"> Invested On Business Plan </td>
+                                <td data-label="Time">21 Sep 2023 04:23 PM</td>
+                            </tr>
+
+                                                    <tr>
+                                <td data-label="SL No.">2</td>
+                                <td data-label="Transaction ID">ZBEB2YP36U3Y</td>
+                                <td data-label="Amount">
+                                    <span class="fontBold text-success">+100 USD</span>
+                                </td>
+                                <td data-label="Remarks"> Deposit Via Binance </td>
+                                <td data-label="Time">21 Sep 2023 10:40 AM</td>
+                            </tr>
+
+                                                    <tr>
+                                <td data-label="SL No.">3</td>
+                                <td data-label="Transaction ID">PMJXKXCWP6NN</td>
+                                <td data-label="Amount">
+                                    <span class="fontBold text-success">+5 USD</span>
+                                </td>
+                                <td data-label="Remarks"> Deposit Via Binance </td>
+                                <td data-label="Time">21 Sep 2023 10:10 AM</td>
+                            </tr>
+
+                                                    <tr>
+                                <td data-label="SL No.">4</td>
+                                <td data-label="Transaction ID">XT1BXTCR7BXK</td>
+                                <td data-label="Amount">
+                                    <span class="fontBold text-success">+10 USD</span>
+                                </td>
+                                <td data-label="Remarks"> Deposit Via Binance </td>
+                                <td data-label="Time">21 Sep 2023 05:00 AM</td>
+                            </tr>
+
+                                                    <tr>
+                                <td data-label="SL No.">5</td>
+                                <td data-label="Transaction ID">W5SM1KFCDDBC</td>
+                                <td data-label="Amount">
+                                    <span class="fontBold text-danger">-10 USD</span>
+                                </td>
+                                <td data-label="Remarks"> Withdraw Via Binance </td>
+                                <td data-label="Time">19 Sep 2023 07:28 PM</td>
+                            </tr>
+
+
+                                                </tbody>
+                    </table>
+                    <nav id="pagination">
+            <ul class="pagination justify-content-center mb-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.35s">
+            
+                            <li class="disabled page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+            
+            
+                            
+                
+                
+                                                                                        <li class="page-item active">
+                                <a href="#" class="page-link">1<span class="sr-only">(current)</span></a>
+                            </li>
+                                                                                                <li class="page-item">
+                                <a href="transaction.php?page=2" class="page-link">2</a>
+                            </li>
+                                                                                                <li class="page-item">
+                                <a href="transaction.php?page=3" class="page-link">3</a>
+                            </li>
+                                                                                                <li class="page-item">
+                                <a href="transaction.php?page=4" class="page-link">4</a>
+                            </li>
+                                                                      
+                                    <li class=" page-item">
+                        <a href="#" class="page-link">...</a>
+                    </li>
+                
+ 
+                
+                    <li class="page-item">
+                                <a href="transaction.php?page=104" class="page-link">104</a>
+                            </li>
+                                                                                                <li class="page-item">
+                                <a href="transaction.php?page=105" class="page-link">105</a>
+                            </li>
+                                                                        
+            
+                            <li class="page-item">
+                    <a href="transaction.php?page=2" class="page-link" rel="next">&raquo;</a>
+                </li>
+                    </ul>
+    </nav>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+    <script>
+        "use strict";
+
+        function copyFunction() {
+            var copyText = document.getElementById("sponsorURL");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            /*For mobile devices*/
+            document.execCommand("copy");
+            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
+        }
+    </script>
+        
+</body>
+</html>

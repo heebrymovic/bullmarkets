@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+           
+            <%- include('./partials/navbar-expanded') -%>
+
+
+            <!------------- others main dashboard body content ------------>
+            
+    <!-- My Referral -->
+    <section class="refferal-link">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="header-text-full">
+                        <h3 class="ms-2 mb-0 mt-2">My Referral</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="main row mt-4">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                    <div class="card-box refferal-box">
+                        <h5>Your referral link</h5>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                value="https://script.bugfinder.net/hyippro/screaminlizard/register/demouser"
+                                id="sponsorURL"
+                                disabled=""/>
+                            <button id="copyBtn" onclick="copyText('sponsorURL')" class="btn text-white">
+                                Copy Link                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                            <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-start " id="ref-label">
+                            <div class="nav flex-column nav-pills mx-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                                    <a class=" nav-link    active   " id="v-pills-1-tab" href="javascript:void(0)" data-bs-toggle="pill" data-bs-target="#v-pills-1"  role="tab" aria-controls="v-pills-1" aria-selected="true">Level 1</a>
+                                                                    <a class=" nav-link  " id="v-pills-2-tab" href="javascript:void(0)" data-bs-toggle="pill" data-bs-target="#v-pills-2"  role="tab" aria-controls="v-pills-2" aria-selected="true">Level 2</a>
+                                                                    <a class=" nav-link  " id="v-pills-3-tab" href="javascript:void(0)" data-bs-toggle="pill" data-bs-target="#v-pills-3"  role="tab" aria-controls="v-pills-3" aria-selected="true">Level 3</a>
+                                                                    <a class=" nav-link  " id="v-pills-4-tab" href="javascript:void(0)" data-bs-toggle="pill" data-bs-target="#v-pills-4"  role="tab" aria-controls="v-pills-4" aria-selected="true">Level 4</a>
+                                                                    <a class=" nav-link  " id="v-pills-5-tab" href="javascript:void(0)" data-bs-toggle="pill" data-bs-target="#v-pills-5"  role="tab" aria-controls="v-pills-5" aria-selected="true">Level 5</a>
+                                                                    <a class=" nav-link  " id="v-pills-6-tab" href="javascript:void(0)" data-bs-toggle="pill" data-bs-target="#v-pills-6"  role="tab" aria-controls="v-pills-6" aria-selected="true">Level 6</a>
+                                                                    <a class=" nav-link  " id="v-pills-7-tab" href="javascript:void(0)" data-bs-toggle="pill" data-bs-target="#v-pills-7"  role="tab" aria-controls="v-pills-7" aria-selected="true">Level 7</a>
+                                                            </div>
+                            <div class="tab-content w-90" id="v-pills-tabContent">
+                                                                    <div class="tab-pane fade  show active   " id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                                                                                    <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone Number</th>
+                                                        <th scope="col">Joined At</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                     
+                                                        <tr>
+
+                                                            <td data-label="Username">
+                                                                trhnmmt                                                            </td>
+                                                            <td data-label="Email" class="">allinformation360@gmail.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +880+8801810074097
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                03 Aug, 2023 05:44 AM
+                                                            </td>
+
+                                                        </tr>
+                                                         <tr>
+
+                                                            <td data-label="Username">
+                                                                srx01   </td>
+                                                            <td data-label="Email" class="">srx01@hotmail.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +90+905555555555
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                20 Aug, 2023 02:20 PM
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td data-label="Username">
+                                                                Titu123 </td>
+                                                            <td data-label="Email" class="">Rajtitumridha@gmail.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +880+8801885780744
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                12 Sep, 2023 09:49 AM
+                                                            </td>
+
+                                                        </tr>
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="tab-pane fade  " id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                                                                                    <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone Number</th>
+                                                        <th scope="col">Joined At</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                           
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                appexin18                                                            </td>
+                                                            <td data-label="Email" class="">3z1i4139d1@example.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +98+985888455656555
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                23 May, 2022 07:16 PM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                level222jet                                                            </td>
+                                                            <td data-label="Email" class="">viberjet11@gmail.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +99209128090070
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                11 Jul, 2022 05:12 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                viberjet2                                                            </td>
+                                                            <td data-label="Email" class="">viberjet22@gmail.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +9809128090070
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                12 Jul, 2022 05:10 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                        </tbody>
+                                                </table>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="tab-pane fade  " id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+                                                                                    <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone Number</th>
+                                                        <th scope="col">Joined At</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                Samantha                                                            </td>
+                                                            <td data-label="Email" class="">fx5q9fr5fi@example.com</td>
+                                                            <td data-label="Phone Number">
+                                                                01835645251
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                uaslqas                                                            </td>
+                                                            <td data-label="Email" class="">eb3ka6o38f@example.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +8801756645673
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                alexpetr                                                            </td>
+                                                            <td data-label="Email" class="">rickqxo4cl@example.biz</td>
+                                                            <td data-label="Phone Number">
+                                                                
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                Norberto                                                             </td>
+                                                            <td data-label="Email" class="">qlxse0u6y0@example.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +1546075454656
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                appexin2                                                            </td>
+                                                            <td data-label="Email" class="">zjmxv097sq@example.biz</td>
+                                                            <td data-label="Phone Number">
+                                                                +98+989375265354
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                22 May, 2022 10:04 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                appexin23                                                            </td>
+                                                            <td data-label="Email" class="">6i5z8yz392@example.biz</td>
+                                                            <td data-label="Phone Number">
+                                                                +98+9847564564564
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                23 May, 2022 03:01 PM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                viberjet3                                                            </td>
+                                                            <td data-label="Email" class="">viberjet33@gmail.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +9809128090070
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                12 Jul, 2022 05:16 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                        </tbody>
+                                                </table>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="tab-pane fade  " id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+                                                                                    <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone Number</th>
+                                                        <th scope="col">Joined At</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                mendes                                                            </td>
+                                                            <td data-label="Email" class="">blwecy2bzs@example.net</td>
+                                                            <td data-label="Phone Number">
+                                                                +154654656
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                tailers                                                            </td>
+                                                            <td data-label="Email" class="">htumtun0hv@example.net</td>
+                                                            <td data-label="Phone Number">
+                                                                +1546075454656
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                appexin3                                                            </td>
+                                                            <td data-label="Email" class="">r9vcv9pnb4@example.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +98+985656565655655
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                23 May, 2022 02:39 PM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                        </tbody>
+                                                </table>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="tab-pane fade  " id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
+                                                                                    <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone Number</th>
+                                                        <th scope="col">Joined At</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                Kattie                                                             </td>
+                                                            <td data-label="Email" class="">arv49bcsy9@example.biz</td>
+                                                            <td data-label="Phone Number">
+                                                                +1546545454656
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                        </tbody>
+                                                </table>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="tab-pane fade  " id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-6-tab">
+                                                                                    <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone Number</th>
+                                                        <th scope="col">Joined At</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                Delphine                                                            </td>
+                                                            <td data-label="Email" class="">188j7gon6s@example.biz</td>
+                                                            <td data-label="Phone Number">
+                                                                +1546075454656
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                        </tbody>
+                                                </table>
+                                            </div>
+                                                                            </div>
+                                                                    <div class="tab-pane fade  " id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-7-tab">
+                                                                                    <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone Number</th>
+                                                        <th scope="col">Joined At</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                            <tr>
+
+                                                            <td data-label="Username">
+                                                                ambrose                                                            </td>
+                                                            <td data-label="Email" class="">wf2jzd33ri@example.com</td>
+                                                            <td data-label="Phone Number">
+                                                                +1546075454656
+                                                            </td>
+                                                            <td data-label="Joined At">
+                                                                17 Dec, 2021 10:05 AM
+                                                            </td>
+
+                                                        </tr>
+                                                                                                        </tbody>
+                                                </table>
+                                            </div>
+                                                                            </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                    </div>
+    </section>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+
+
+    
+
+    <script>
+        "use strict";
+        function copyFunction() {
+            var copyText = document.getElementById("sponsorURL");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            /*For mobile devices*/
+            document.execCommand("copy");
+            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

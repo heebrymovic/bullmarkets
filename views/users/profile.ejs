@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+          
+            <%- include('./partials/navbar-expanded') -%>
+
+
+            <!------------- others main dashboard body content ------------>
+            
+    <!-- main -->
+    <div class="container-fluid">
+        <div class="main row">
+            <div class="col-12">
+                <div class="dashboard-heading">
+                    <h4 class="mb-0">Edit Profile</h4>
+                </div>
+
+                <section class="profile-setting">
+                    <div class="row g-4 g-lg-5">
+                        <div class="col-lg-4">
+                            <div class="sidebar-wrapper">
+                                <form method="post" action="https://script.bugfinder.net/hyippro/screaminlizard/user/updateProfile"
+                                      enctype="multipart/form-data">
+                                    <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                                    <div class="profile">
+                                        <div class="img">
+                                            <img id="profile"
+                                                style="height: 100px; object-fit: cover;" 
+                                                 src="https://script.bugfinder.net/hyippro/screaminlizard/assets/admin/images/default.png"
+                                                 alt="preview user image" class="img-fluid"/>
+                                            <button class="upload-img">
+                                                <i class="fa fa-camera"></i>
+                                                <input
+                                                    class="form-control"
+                                                    accept="image/*"
+                                                    type="file"
+                                                    name="image"
+                                                    id="image"
+                                                    onchange="previewImage('profile')"/>
+                                            </button>
+                                                                                    </div>
+
+
+                                        <div class="text">
+                                            <h5 class="name">Demouser</h5>
+                                            <span>demouser@gmail.com</span>
+                                            <div>
+                                                <button class="btn-custom mt-2 p-2 text-white"
+                                                        type="submit">Submit Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="profile-navigator">
+                                    <button tab-id="tab1" class="tab  active">
+                                        <i class="fa fa-user"></i> Profile information                                    </button>
+                                    <button tab-id="tab2" class="tab ">
+                                        <i class="fa fa-key"></i> Password setting                                    </button>
+                                    <button tab-id="tab3" class="tab ">
+                                        <i class="fa fa-id-card"></i> identity verification                                    </button>
+                                    <button tab-id="tab4" class="tab ">
+                                        <i class="fa fa-map-marked-alt"></i>
+                                        address verification                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <div id="tab1" class="content  active">
+                                <form action="https://script.bugfinder.net/hyippro/screaminlizard/user/updateInformation" method="post">
+                                    <input type="hidden" name="_method" value="put">                                    <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                                    <div class="row g-4">
+                                        <div class="input-box col-md-6">
+                                            <label for="">First Name</label>
+                                            <input type="text" class="form-control" name="firstname" id="firstname"
+                                                   value="Alex"/>
+                                                                                    </div>
+
+                                        <div class="input-box col-md-6">
+                                            <label for="">Last Name</label>
+                                            <input type="text" id="lastname" name="lastname" class="form-control"
+                                                   value="Hales"/>
+                                                                                    </div>
+
+                                        <div class="input-box col-md-6">
+                                            <label for="">Username</label>
+                                            <input type="text" id="username" name="username"
+                                                   value="demouser" class="form-control"/>
+                                                                                    </div>
+                                        <div class="input-box col-md-6">
+                                            <label for="">Email Address</label>
+                                            <input type="email" id="email" value="demouser@gmail.com" readonly
+                                                   class="form-control"/>
+                                                                                    </div>
+                                        <div class="input-box col-md-6">
+                                            <label for="">Phone Number</label>
+                                            <input type="text" id="phone" readonly class="form-control"
+                                                   value="191611105804"/>
+                                                                                    </div>
+                                        <div class="input-box col-md-6">
+                                            <label for="">Preferred language</label>
+                                            <select class="js-example-basic-single form-control form-select"
+                                                    name="language_id"
+                                                    id="language_id"
+                                                    aria-label="Default select example">
+                                                <option value="" disabled>Select Language</option>
+                                                                                                    <option
+                                                        value="1" selected>
+                                                        English                                                    </option>
+                                                                                                    <option
+                                                        value="17" >
+                                                        Hindi                                                    </option>
+                                                                                                    <option
+                                                        value="18" >
+                                                        Spanish                                                    </option>
+                                                                                            </select>
+                                                                                    </div>
+
+                                        <div class="input-box col-12">
+                                            <label for="">Address</label>
+                                            <textarea class="form-control" id="address" name="address" cols="30"
+                                                      rows="3">HELLO</textarea>
+                                                                                    </div>
+                                        <div class="input-box col-12">
+                                            <button class="btn-custom">Update</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="tab2" class="content ">
+                                <form method="post" action="https://script.bugfinder.net/hyippro/screaminlizard/user/updatePassword">
+                                    <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                                    <div class="row g-4">
+                                        <div class="input-box col-md-6">
+                                            <label for="">Current Password</label>
+                                            <input type="password" id="current_password" name="current_password"
+                                                   autocomplete="off" class="form-control"
+                                                   placeholder="Enter Current Password"/>
+                                                                                    </div>
+
+                                        <div class="input-box col-md-6">
+                                            <label for="">New Password</label>
+                                            <input type="password" id="password" name="password" autocomplete="off"
+                                                   class="form-control" placeholder="Enter New Password"/>
+                                                                                    </div>
+                                        <div class="input-box col-md-6">
+                                            <label for="">Confirm Password</label>
+                                            <input type="password" id="password_confirmation"
+                                                   name="password_confirmation" autocomplete="off" class="form-control"
+                                                   placeholder="Confirm Password"/>
+                                                                                    </div>
+                                        <div class="input-box col-12">
+                                            <button class="btn-custom" type="submit">Update Password</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="tab3" class="content ">
+                                                                    <div class="alert mb-0">
+                                        <i class="fa fa-times-circle text-success"></i>
+                                        <span class="text-success">Your KYC already verified</span>
+                                    </div>
+                                                            </div>
+
+                            <div id="tab4" class="content ">
+                                                                    <div class="alert mb-0">
+                                        <i class="fa fa-check-circle text-success"></i>
+                                        <span>Your KYC already verified</span>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+        
+    
+</body>
+</html>

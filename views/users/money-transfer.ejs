@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+         
+            <%- include('./partials/navbar-expanded') -%>
+
+            <!------------- others main dashboard body content ------------>
+
+            
+                <!-- main -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="header-text-full">
+                    <h3 class="ms-2 mb-0 mt-2">Balance Transfer</h3>
+                </div>
+            </div>
+        </div>
+        <div class="main row">
+            <div class="col-12">
+                <!-- table -->
+                <div class="table-parent table-responsive mt-4">
+                    <div class="table-search-bar">
+                        <div>
+                            <form action="" method="post">
+                                <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                                <div class="row g-3 align-items-end">
+                                    <div class="input-box col-lg-6 col-md-6 col-xl-6 col-12">
+                                        <input class="form-control" type="email" name="email" value="" placeholder="Receiver Email Address"/>
+                                                                                <div class="error text-danger">The email field is required. </div>
+                                                                            </div>
+
+                                    <div class="input-box col-lg-6 col-md-6 col-xl-6 col-12">
+                                        <input class="form-control" type="text" name="amount" value="" placeholder="Enter Amount"  onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')" />
+                                                                                    <div class="error text-danger">The amount field is required. </div>
+                                                                            </div>
+
+                                    <div class="input-box col-lg-6 col-md-6 col-xl-6 col-12">
+                                        <select class="js-example-basic-single form-control" name="wallet_type" id="wallet_type">
+                                            <option disabled selected>Select Wallet</option>
+                                            <option value="balance">Main balance</option>
+                                            <option value="interest_balance">Interest Balance</option>
+                                        </select>
+                                                                                    <div class="error text-danger">Please Select a wallet </div>
+                                                                            </div>
+
+                                    <div class="input-box col-lg-6 col-md-6 col-xl-6 col-12">
+                                        <input class="form-control" type="password" name="password" value="" placeholder="Your Password"/>
+                                                                                <div class="error text-danger">The password field is required. </div>
+                                                                            </div>
+
+                                    <div class="input-box col-lg-12 col-md-12 col-xl-12 col-12">
+                                        <button class="btn-custom w-100" type="submit"><i class="fa fa-dollar-sign"></i>Transfer</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+
+
+  
+</body>
+</html>

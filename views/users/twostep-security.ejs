@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+
+    <%- include('./partials/sideBar') -%>
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+           
+            <%- include('./partials/navbar-expanded') -%>
+
+            <!------------- others main dashboard body content ------------>
+            
+
+    <!-- main -->
+    <section class="transaction-history twofactor">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="header-text-full">
+                        <h3 class="ms-2 mb-4 mt-2">2 Step Security</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                                    <div class="col-lg-6 col-md-6 mb-3">
+                        <div class="card text-center bg-dark py-2">
+                            <div class="card-header">
+                                <h3 class="card-title golden-text">Two Factor Authenticator</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-box refferal-box">
+                                    <div class="input-group">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            value="PFOJHDM27WVYXLL5"
+                                            id="sponsorURL"
+                                            disabled=""/>
+                                        <button id="copyBtn" onclick="copyText('sponsorURL')" class="btn text-white">
+                                            Copy Link                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mx-auto text-center py-4">
+                                    <img class="mx-auto" src="https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2Fdemouser%40Hyippro%3Fsecret%3DPFOJHDM27WVYXLL5">
+                                </div>
+
+                                <div class="form-group mx-auto text-center">
+                                    <a href="javascript:void(0)" class="btn btn-bg btn-lg"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#enableModal">Enable Two Factor Authenticator</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                
+
+                <div class="col-lg-6 col-md-6 mb-3">
+                    <div class="card text-center bg-dark py-2">
+                        <div class="card-header">
+                            <h3 class="card-title golden-text pt-2">Google Authenticator</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <h6 class="text-uppercase my-3">Use Google Authenticator to Scan the QR code  or use the code</h6>
+
+                            <p class="p-5">Google Authenticator is a multifactor app for mobile devices. It generates timed codes used during the 2-step verification process. To use Google Authenticator, install the Google Authenticator application on your mobile device.</p>
+                            <a class="btn btn btn-bg btn-md mt-3"
+                               href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en"
+                               target="_blank">DOWNLOAD APP</a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--Enable Modal -->
+    <div id="enableModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content form-block">
+                <div class="modal-header">
+                    <h4 class="modal-title golden-text">Verify Your OTP</h4>
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times"></i>
+                    </button>
+
+                </div>
+                <form action="https://script.bugfinder.net/hyippro/screaminlizard/user/twoStep-enable" method="POST">
+                    <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                    <div class="modal-body">
+
+                        <div class="input-box">
+                            <input type="hidden" name="key" value="PFOJHDM27WVYXLL5">
+                            <input type="text" class="form-control" name="code" placeholder="Enter Google Authenticator Code">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer border-top-0">
+                        <button type="submit" class="btn btn-bg">Verify</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Disable Modal -->
+    <div id="disableModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content form-block">
+                <div class="modal-header">
+                    <h4 class="modal-title golden-text">Verify Your OTP to Disable</h4>
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <form action="https://script.bugfinder.net/hyippro/screaminlizard/user/twoStep-disable" method="POST">
+                    <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                    <div class="modal-body">
+                        <div class="input-box">
+                            <input type="text" class="form-control" name="code" placeholder="Enter Google Authenticator Code">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Verify</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+    
+    <script>
+        function copyFunction() {
+            var copyText = document.getElementById("referralURL");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            /*For mobile devices*/
+            document.execCommand("copy");
+            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"  >
+
+<!-- head tag starts here  -->
+
+<%- include('./partials/head') -%>
+
+<!-- head tag ends here -->
+
+<body >
+
+<!-- bottom navbar -->
+
+<%- include('./partials/navbar') -%>
+
+
+
+<div class="dashboard-wrapper">
+    <!-- sidebar -->
+    <%- include('./partials/sideBar') -%>
+
+
+    <!-- content -->
+    <div id="content">
+        <div class="overlay">
+            <!-- navbar -->
+           
+            <%- include('./partials/navbar-expanded') -%>
+
+            <!------------- others main dashboard body content ------------>
+            
+    <!-- main -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="header-text-full">
+                    <h3 class="ms-2 mb-0 mt-2">Payout Money</h3>
+                </div>
+            </div>
+        </div>
+
+        <section class="payment-gateway mt-4">
+            <div class="container-fluid">
+                <div class="row">
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/606418e821ad01617172712.jpg"
+                                         alt="Wire Transfer">
+                                    <button type="button"
+                                            data-id="1"
+                                            data-name="Wire Transfer"
+                                            data-min_amount="1"
+                                            data-max_amount="2000"
+                                            data-percent_charge="0"
+                                            data-fix_charge="10"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/6064181b137c91617172507.jpg"
+                                         alt="Bank Transfer">
+                                    <button type="button"
+                                            data-id="2"
+                                            data-name="Bank Transfer"
+                                            data-min_amount="1"
+                                            data-max_amount="100"
+                                            data-percent_charge="1"
+                                            data-fix_charge="10"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/64a911fa47d4f1688801786.jpg"
+                                         alt="Flutterwave">
+                                    <button type="button"
+                                            data-id="1000"
+                                            data-name="Flutterwave"
+                                            data-min_amount="10"
+                                            data-max_amount="200000"
+                                            data-percent_charge="1"
+                                            data-fix_charge="10"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/64a912261ac0f1688801830.jpg"
+                                         alt="Razorpay">
+                                    <button type="button"
+                                            data-id="1001"
+                                            data-name="Razorpay"
+                                            data-min_amount="10"
+                                            data-max_amount="200000"
+                                            data-percent_charge="1"
+                                            data-fix_charge="10"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/64a9120f09adb1688801807.jpg"
+                                         alt="Paystack">
+                                    <button type="button"
+                                            data-id="1002"
+                                            data-name="Paystack"
+                                            data-min_amount="10"
+                                            data-max_amount="200000"
+                                            data-percent_charge="1"
+                                            data-fix_charge="10"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/64a911e2ae88b1688801762.png"
+                                         alt="Coinbase">
+                                    <button type="button"
+                                            data-id="1003"
+                                            data-name="Coinbase"
+                                            data-min_amount="10"
+                                            data-max_amount="200000"
+                                            data-percent_charge="1"
+                                            data-fix_charge="1.2"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/64a9121aab5bd1688801818.jpg"
+                                         alt="Perfect Money">
+                                    <button type="button"
+                                            data-id="1004"
+                                            data-name="Perfect Money"
+                                            data-min_amount="10"
+                                            data-max_amount="200000"
+                                            data-percent_charge="1"
+                                            data-fix_charge="10"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/64a91204424f91688801796.png"
+                                         alt="Paypal">
+                                    <button type="button"
+                                            data-id="1005"
+                                            data-name="Paypal"
+                                            data-min_amount="10"
+                                            data-max_amount="200000"
+                                            data-percent_charge="1"
+                                            data-fix_charge="10"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-xl-2 col-lg-2 col-sm-6 mb-4">
+                            <div class="card-box">
+                                <div class="gateway-box">
+                                    <img class="img-fluid gateway"
+                                         src="https://script.bugfinder.net/hyippro/screaminlizard/assets/uploads/withdraw/64a9119db33511688801693.png"
+                                         alt="Binance">
+                                    <button type="button"
+                                            data-id="1006"
+                                            data-name="Binance"
+                                            data-min_amount="10"
+                                            data-max_amount="200000"
+                                            data-percent_charge="2"
+                                            data-fix_charge="3"
+
+                                                                                            data-bs-toggle="modal" data-bs-target="#addFundModal"
+                                            class="btn-custom w-100 mt-3 text-white addFund"
+                                        >
+                                        PAYOUT NOW                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </section>
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+        <!-- Modal -->
+        <div class="modal fade addFundModal" id="addFundModal" tabindex="-1" aria-labelledby="editModalLabel"
+             aria-hidden="true" data-bs-backdrop="static" role="dialog">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content form-block">
+                    <div class="modal-header">
+                        <h4 class="modal-title method-name golden-text"></h4>
+                        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                    <form action="https://script.bugfinder.net/hyippro/screaminlizard/user/payout" method="post">
+                        <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                        <div class="modal-body">
+                            <div class="payment-form">
+                                <p class="depositLimit"></p>
+                                <p class="depositCharge"></p>
+
+                                <input type="hidden" class="gateway" name="gateway" value="">
+
+                                <div class="row g-3 align-items-end">
+                                    <div class="input-box col-12">
+                                        <h5 class="text-white">Select Wallet</h5>
+                                        <select class="js-example-basic-single form-control" name="wallet_type">
+                                            <option value="balance">Main balance</option>
+                                            <option value="interest_balance">Interest Balance</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 align-items-end mt-2">
+                                    <div class="input-box col-12">
+                                        <h5 class="text-white">Amount</h5>
+                                        <div class="input-group">
+                                            <input type="text" class="amount form-control" name="amount"/>
+                                            <button class="btn-custom show-currency"></button>
+                                        </div>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box col-12 modal-footer">
+                            <button class="btn-custom w-100" type="submit"><i
+                                    class="fa fa-angle-right"></i>Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="payoutOffDayModal" class="modal fade addFundModal" tabindex="-1" role="dialog" data-bs-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content form-block">
+                    <div class="modal-header">
+                        <h4 class="modal-title method-name golden-text">Payout Information</h4>
+                        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+
+                    <form action="https://script.bugfinder.net/hyippro/screaminlizard/user/payout" method="post">
+                        <input type="hidden" name="_token" value="Gvsg3fAf528eqibF2zFwIaWDTReAEfqrt57li8v4">                        <div class="modal-body">
+                            <div class="payment-form ">
+                                <span class="withdrawClose"></span> <span class="toDay text-danger"></span>
+                                <p class="openDays mt-3"> Opening Days :                                    <span class="saturday badge bg-primary custom-size"></span>
+                                    <span class="sunday badge bg-success custom-size"></span>
+                                    <span class="monday badge bg-info custom-size"></span>
+                                    <span class="tuesday badge bg-warning custom-size"></span>
+                                    <span class="wednesday badge bg-success custom-size"></span>
+                                    <span class="thursday badge bg-primary custom-size"></span>
+                                    <span class="friday badge bg-info custom-size"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+<script src="../assets/themes/screaminlizard/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/owl.carousel.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/select2.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/apexcharts.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/radialprogressOld.js"></script>
+<script src="../assets/global/js/notiflix-aio-2.7.0.min.js"></script>
+<script src="../assets/global/js/pusher.min.js"></script>
+<script src="../assets/global/js/vue.min.js"></script>
+<script src="../assets/global/js/axios.min.js"></script>
+<script src="../assets/themes/screaminlizard/js/data.js"></script>
+<script src="../assets/themes/screaminlizard/js/script.js"></script>
+
+
+    <script>
+        "use strict";
+        var id, minAmount, maxAmount, baseSymbol, fixCharge, percentCharge, currency, gateway;
+
+        $('.notifyOffDay').on('click', function () {
+            let today = $(this).data('offday');
+            let days = $(this).data('days');
+            if (days.saturday != 0) {
+                $('.saturday').text('Saturday');
+            }
+            if (days.sunday != 0) {
+                $('.sunday').text('Sunday');
+            }
+            if (days.monday != 0) {
+                $('.monday').text('Monday');
+            }
+            if (days.tuesday != 0) {
+                $('.tuesday').text('Tuesday');
+            }
+            if (days.wednesday != 0) {
+                $('.wednesday').text('Wednesday');
+            }
+            if (days.thursday != 0) {
+                $('.thursday').text('Thursday');
+            }
+            if (days.friday != 0) {
+                $('.friday').text('Friday');
+            }
+
+
+            $('.withdrawClose').text(`Payment withdrawal closes on `);
+            $('.toDay').text(`${today}`);
+
+        })
+
+        $('.addFund').on('click', function () {
+            id = $(this).data('id');
+            gateway = $(this).data('gateway');
+            minAmount = $(this).data('min_amount');
+            maxAmount = $(this).data('max_amount');
+            baseSymbol = "$";
+            fixCharge = $(this).data('fix_charge');
+            percentCharge = $(this).data('percent_charge');
+            currency = $(this).data('currency');
+            $('.depositLimit').text(`Transaction Limit: ${minAmount} - ${maxAmount}  ${baseSymbol}`);
+
+            var depositCharge = `Charge: ${fixCharge} ${baseSymbol}  ${(0 < percentCharge) ? ' + ' + percentCharge + ' % ' : ''}`;
+            $('.depositCharge').text(depositCharge);
+            $('.method-name').text(`Payout By ${$(this).data('name')}`);
+            $('.show-currency').text("USD");
+            $('.gateway').val(id);
+        });
+        $('.close').on('click', function (e) {
+            $('#loading').hide();
+            $('.amount').val(``);
+            $("#addFundModal").modal("hide");
+        });
+
+    </script>
+
+</body>
+</html>
